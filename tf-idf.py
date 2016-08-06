@@ -17,3 +17,11 @@ def tfidf(corpus):
     transformer = TfidfTransformer()
     tfidf = transformer.fit_transform(a)
     return tfidf.toarray()
+
+
+def euclidean_metric(vector1,vector2):
+    sqDiffVector = vector1 - vector2
+    sqDiffVector = sqDiffVector ** 2
+    sqDistance = sqDiffVector.sum()
+    distance = sqDistance ** 0.5
+    return distance
